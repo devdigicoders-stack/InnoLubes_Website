@@ -51,8 +51,8 @@ export default function Contact() {
         <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 24px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', transform: 'translateY(-40px)' }}>
             {[
-              { icon: MapPin, title: 'Our Address', lines: ['123 Industrial Area, Phase-2', 'Delhi NCR, India — 110020'] },
-              { icon: Phone, title: 'Call Us', lines: ['+91 99999 99999', '+91 88888 88888'] },
+              { icon: MapPin, title: 'Our Address', lines: ['Plot No. 31, Karaya Industrial Park,', '  Village Karaya, Valsad, Gujarat - 396191'] },
+              { icon: Phone, title: 'Call Us', lines: ['+91 9426853064', '+91 7984441421'] },
               { icon: Mail, title: 'Email Us', lines: ['info@innolubes.com', 'sales@innolubes.com'] },
               { icon: Clock, title: 'Working Hours', lines: ['Mon – Sat: 9AM – 6PM', 'Sun: Closed'] },
             ].map(({ icon: Icon, title, lines }, i) => (
