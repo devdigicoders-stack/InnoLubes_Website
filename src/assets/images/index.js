@@ -1,7 +1,13 @@
 // Logo
 import logo from './logo.png';
 
-// Product images
+// Product images (new dedicated product photos)
+import product1 from './product1.jpeg';
+import product2 from './product2.jpeg';
+import product3 from './product3.jpeg';
+import product4 from './product4.jpeg';
+
+// Product images (fallback / additional grades)
 import compressorOil from './about10.jpeg';
 import gearOil from './about5.jpeg';
 import fluidGrease from './about6.jpeg';
@@ -32,6 +38,12 @@ import industrialImg4 from './image4.jpeg';
 
 export {
   logo,
+  // New product photos
+  product1,
+  product2,
+  product3,
+  product4,
+  // Product oils & greases
   compressorOil,
   gearOil,
   fluidGrease,
@@ -40,16 +52,19 @@ export {
   textileOil,
   hydraulicOil,
   metalWorkingFluids,
+  // About / Company
   exhibitionImg,
   teamMeetingImg,
   industrialDiscussionImg,
   manufacturingPlantImg,
+  // Factory / Office / Gallery
   corporateOfficeImg,
   factoryImg,
   warehouseImg,
   warehouseExtImg,
   productDisplayImg,
   galleryShowcaseImg,
+  // Misc
   trustedClientsImg,
   industrialImg3,
   industrialImg4,

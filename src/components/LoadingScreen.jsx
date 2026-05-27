@@ -48,7 +48,7 @@ export default function LoadingScreen() {
 
       <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
         {/* Logo */}
-        <div style={{ animation: 'logoFloat 3s ease-in-out infinite', marginBottom: '32px' }}>
+        <div style={{ animation: 'logoFloat 3s ease-in-out infinite', marginBottom: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img src={logo} alt="INNOLUBES" style={{
             height: '80px', objectFit: 'contain',
             filter: 'drop-shadow(0 0 30px rgba(212,160,23,0.6))',
