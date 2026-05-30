@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Droplets, Zap, Shield, Phone } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
-import {product1,product2,product3,product4,
+import {product1,product2,product3,product4,product5,product6,product7,
   hydraulicOil, gearOil, compressorOil, fluidGrease,
   frlOil, ap3Grease, textileOil, metalWorkingFluids
 } from '../assets/images/index.js';
@@ -48,6 +48,74 @@ const products = [
     benefits: ['Excellent pumpability', 'High mechanical stability', 'Good water resistance', 'Wide temperature service', 'Corrosion protection'],
     color: '#d4a017',
   },
+  {
+  img: product5,
+  name: ' Automatic Transmission Fluid',
+  category: ' Oils',
+  grade: 'NLGI 000/00/0',
+  desc: 'Premium quality Automatic Transmission Fluid specially formulated for forklifts, heavy-duty vehicles, industrial cranes, and enhanced thermal stability under demanding operating conditions.',
+  applications: [
+    'Forklifts',
+    'Heavy commercial vehicles',
+    'Industrial cranes',
+    'Automatic transmissions',
+    'Hydraulic power steering systems'
+  ],
+  benefits: [
+    'Smooth and efficient gear shifting',
+    'Excellent anti-wear protection',
+    'Superior thermal and oxidation stability',
+    'Reduces transmission component wear',
+    'Protects against rust and corrosion',
+    'Extended fluid service life',
+    'Reliable performance under heavy loads'
+  ],
+  color: '#00B7B5'
+},
+{
+  img: product6,
+  name: 'Vacuum Oil',
+  category: 'Industrial Oils',
+  grade: 'ISO VG 100S',
+  desc: 'High-performance vacuum pump oil formulated for rotary vane and industrial vacuum systems, ensuring efficient lubrication and stable vacuum performance.',
+  applications: [
+    'Rotary vane vacuum pumps',
+    'Industrial vacuum systems',
+    'Packaging machinery',
+    'Laboratory equipment',
+    'Process industries'
+  ],
+  benefits: [
+    'Low volatility',
+    'Excellent oxidation stability',
+    'Enhanced pump efficiency',
+    'Reduced wear and deposits',
+    'Extended service life'
+  ],
+  color: '#0f9d58'
+},
+{
+  img: product7,
+  name: 'Vacuum Oil',
+  category: 'Industrial Oils',
+  grade: 'ISO VG 100S',
+  desc: 'Premium vacuum pump lubricant designed to provide reliable sealing, lubrication, and protection in demanding vacuum applications.',
+  applications: [
+    'Vacuum pumps',
+    'Vacuum packaging machines',
+    'Industrial processing units',
+    'Research laboratories',
+    'Manufacturing equipment'
+  ],
+  benefits: [
+    'Excellent thermal stability',
+    'Superior lubrication performance',
+    'Minimizes pump wear',
+    'Reliable vacuum generation',
+    'Long operational life'
+  ],
+  color: '#b71c1c'
+},
   {
     img: hydraulicOil,
     name: 'Hydraulic Oil',
@@ -138,15 +206,33 @@ export default function Products() {
   const [productsRef, productsVisible] = useScrollReveal(0.05);
 
   const filters = ['All', 'Oils', 'Greases', 'Fluids'];
-   const filteredProducts =
-  activeFilter === 'All'
-    ? products
-    : products.filter(p => p.category === activeFilter);
+  const filteredProducts =
+    activeFilter === 'All'
+      ? products
+      : products.filter(p => p.category === activeFilter);
+
   const reveal = (v, d = 0) => ({
     opacity: v ? 1 : 0,
     transform: v ? 'translateY(0)' : 'translateY(40px)',
     transition: `opacity 0.8s ease ${d}s, transform 0.8s ease ${d}s`,
   });
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKey = (e) => { if (e.key === 'Escape') setSelectedProduct(null); };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, []);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (selectedProduct !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [selectedProduct]);
 
   return (
     <main style={{ background: '#0a0a0a', paddingTop: '88px' }}>
@@ -155,7 +241,6 @@ export default function Products() {
       <section ref={heroRef} style={{ position: 'relative', height: '400px', overflow: 'hidden', display: 'flex', alignItems: 'center', background: 'linear-gradient(135deg, #0d1117, #111111)' }}>
         <div className="hex-pattern" style={{ position: 'absolute', inset: 0, opacity: 0.6 }} />
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 50%, rgba(212,160,23,0.08) 0%, transparent 60%)' }} />
-        {/* Animated oil drops */}
         {Array.from({ length: 15 }).map((_, i) => (
           <div key={i} style={{
             position: 'absolute',
@@ -205,8 +290,12 @@ export default function Products() {
           {/* Products */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '28px' }}>
             {filteredProducts.map((p, i) => (
-              <div key={i} className="product-card" style={{ ...reveal(productsVisible, i * 0.07), cursor: 'pointer' }}
-                onClick={() => setSelectedProduct(selectedProduct === i ? null : i)}>
+              <div
+                key={i}
+                className="product-card"
+                style={{ ...reveal(productsVisible, i * 0.07), cursor: 'pointer' }}
+                onClick={() => setSelectedProduct(products.indexOf(p))}
+              >
                 {/* Image */}
                 <div style={{ position: 'relative', height: '240px', overflow: 'hidden' }}>
                   <img src={p.img} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
@@ -214,7 +303,6 @@ export default function Products() {
                     onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                   />
                   <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 50%)` }} />
-                  {/* Grade badge */}
                   <div style={{
                     position: 'absolute', top: '16px', right: '16px',
                     background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(212,160,23,0.4)',
@@ -224,7 +312,6 @@ export default function Products() {
                   }}>
                     {p.grade}
                   </div>
-                  {/* Color accent bar */}
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${p.color}, transparent)` }} />
                 </div>
 
@@ -237,33 +324,9 @@ export default function Products() {
                     {p.desc}
                   </p>
 
-                  {/* Expandable details */}
-                  {selectedProduct === i && (
-                    <div style={{ borderTop: '1px solid rgba(212,160,23,0.15)', paddingTop: '20px', marginBottom: '20px' }}>
-                      <div style={{ marginBottom: '16px' }}>
-                        <div style={{ fontFamily: 'Rajdhani', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#d4a017', marginBottom: '10px' }}>Applications</div>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                          {p.applications.map((a, j) => (
-                            <span key={j} style={{ background: 'rgba(212,160,23,0.06)', border: '1px solid rgba(212,160,23,0.15)', padding: '3px 10px', fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', fontFamily: 'Outfit' }}>
-                              {a}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <div style={{ fontFamily: 'Rajdhani', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#d4a017', marginBottom: '10px' }}>Key Benefits</div>
-                        {p.benefits.map((b, j) => (
-                          <div key={j} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '7px', color: 'rgba(255,255,255,0.55)', fontFamily: 'Outfit', fontSize: '0.85rem' }}>
-                            <CheckCircle size={13} color="#d4a017" /> {b}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                   <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                     <button
-                      onClick={(e) => { e.stopPropagation(); setSelectedProduct(selectedProduct === i ? null : i); }}
+                      onClick={(e) => { e.stopPropagation(); setSelectedProduct(products.indexOf(p)); }}
                       style={{
                         display: 'inline-flex', alignItems: 'center', gap: '8px',
                         color: '#d4a017', fontFamily: 'Rajdhani', fontWeight: 700,
@@ -272,7 +335,7 @@ export default function Products() {
                         transition: 'gap 0.3s',
                       }}
                     >
-                      {selectedProduct === i ? 'Show Less' : 'View Details'} <ArrowRight size={14} />
+                      View Details <ArrowRight size={14} />
                     </button>
                     <Link to="/contact" style={{ marginLeft: 'auto' }} onClick={e => e.stopPropagation()}>
                       <button className="btn-gold" style={{ fontSize: '0.75rem', padding: '8px 18px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
@@ -286,6 +349,183 @@ export default function Products() {
           </div>
         </div>
       </section>
+
+      {/* ─── Product Modal ─── */}
+      {selectedProduct !== null && (
+        <div
+          onClick={() => setSelectedProduct(null)}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 1000,
+            background: 'rgba(0,0,0,0.88)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: '20px',
+            backdropFilter: 'blur(6px)',
+            animation: 'modalFadeIn 0.25s ease',
+          }}
+        >
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              background: '#111111',
+              border: '1px solid rgba(212,160,23,0.25)',
+              maxWidth: '900px',
+              width: '100%',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              maxHeight: '70vh',
+              overflow: 'hidden',
+              position: 'relative',
+              animation: 'modalSlideUp 0.3s ease',
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedProduct(null)}
+              style={{
+                position: 'absolute', top: '16px', right: '16px', zIndex: 10,
+                background: 'rgba(0,0,0,0.75)',
+                border: '1px solid rgba(212,160,23,0.35)',
+                color: '#d4a017',
+                width: '36px', height: '36px',
+                cursor: 'pointer', fontSize: '18px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'Rajdhani', fontWeight: 700,
+                transition: 'background 0.2s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(212,160,23,0.15)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.75)'}
+            >
+              ✕
+            </button>
+
+            {/* Left — Full Product Image */}
+            <div style={{ position: 'relative', minHeight: '480px' }}>
+              <img
+                src={products[selectedProduct].img}
+                alt={products[selectedProduct].name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                }}
+              />
+              {/* Color accent bar at bottom */}
+              <div style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0,
+                height: '4px',
+                background: `linear-gradient(90deg, ${products[selectedProduct].color}, transparent)`,
+              }} />
+            </div>
+
+            {/* Right — Product Data */}
+            <div style={{
+              padding: '40px 32px 32px',
+              overflowY: 'auto',
+              maxHeight: '90vh',
+            }}>
+              {/* Grade badge */}
+              <div style={{
+                display: 'inline-block',
+                background: 'rgba(212,160,23,0.08)',
+                border: '1px solid rgba(212,160,23,0.3)',
+                padding: '4px 12px',
+                fontFamily: 'Rajdhani', fontWeight: 600,
+                fontSize: '0.7rem', letterSpacing: '3px',
+                color: '#d4a017', textTransform: 'uppercase',
+                marginBottom: '14px',
+              }}>
+                {products[selectedProduct].grade}
+              </div>
+
+              {/* Product Name */}
+              <h2 style={{
+                fontFamily: 'Bebas Neue',
+                fontSize: 'clamp(1.6rem, 3vw, 2.2rem)',
+                letterSpacing: '4px',
+                color: '#f0f0f0',
+                margin: '0 0 16px',
+                lineHeight: 1.1,
+              }}>
+                {products[selectedProduct].name}
+              </h2>
+
+              {/* Divider */}
+              <div style={{ height: '1px', background: 'rgba(212,160,23,0.15)', marginBottom: '20px' }} />
+
+              {/* Description */}
+              <p style={{
+                color: 'rgba(255,255,255,0.5)',
+                fontSize: '0.87rem',
+                lineHeight: 1.8,
+                fontFamily: 'Outfit',
+                marginBottom: '24px',
+              }}>
+                {products[selectedProduct].desc}
+              </p>
+
+              {/* Applications */}
+              <div style={{ marginBottom: '22px' }}>
+                <div style={{
+                  fontFamily: 'Rajdhani', fontWeight: 700,
+                  fontSize: '0.72rem', letterSpacing: '3px',
+                  textTransform: 'uppercase', color: '#d4a017',
+                  marginBottom: '10px',
+                }}>Applications</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  {products[selectedProduct].applications.map((a, j) => (
+                    <span key={j} style={{
+                      background: 'rgba(212,160,23,0.06)',
+                      border: '1px solid rgba(212,160,23,0.15)',
+                      padding: '4px 12px',
+                      fontSize: '0.78rem',
+                      color: 'rgba(255,255,255,0.55)',
+                      fontFamily: 'Outfit',
+                    }}>
+                      {a}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Key Benefits */}
+              <div style={{ marginBottom: '32px' }}>
+                <div style={{
+                  fontFamily: 'Rajdhani', fontWeight: 700,
+                  fontSize: '0.72rem', letterSpacing: '3px',
+                  textTransform: 'uppercase', color: '#d4a017',
+                  marginBottom: '10px',
+                }}>Key Benefits</div>
+                {products[selectedProduct].benefits.map((b, j) => (
+                  <div key={j} style={{
+                    display: 'flex', alignItems: 'center', gap: '8px',
+                    marginBottom: '8px',
+                    color: 'rgba(255,255,255,0.55)',
+                    fontFamily: 'Outfit', fontSize: '0.85rem',
+                  }}>
+                    <CheckCircle size={13} color="#d4a017" /> {b}
+                  </div>
+                ))}
+              </div>
+
+              {/* Enquire Button */}
+              <Link to="/contact" onClick={() => setSelectedProduct(null)}>
+                <button
+                  className="btn-gold"
+                  style={{
+                    fontSize: '0.82rem',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                  }}
+                >
+                  <Phone size={13} /> Enquire Now
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, rgba(212,160,23,0.04) 0%, transparent 100%)', borderTop: '1px solid rgba(212,160,23,0.08)' }}>
@@ -306,8 +546,23 @@ export default function Products() {
       </section>
 
       <style>{`
+        @keyframes modalFadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+        @keyframes modalSlideUp {
+          from { transform: translateY(30px); opacity: 0; }
+          to   { transform: translateY(0);    opacity: 1; }
+        }
         @media (max-width: 768px) {
-          section > div > div[style*="grid-template-columns: repeat(auto-fill"] { grid-template-columns: 1fr !important; }
+          section > div > div[style*="grid-template-columns: repeat(auto-fill"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 640px) {
+          div[style*="gridTemplateColumns: '1fr 1fr'"] {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}</style>
     </main>

@@ -19,7 +19,7 @@
     color: #f0f0f0;
     font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
-    cursor: none;
+    cursor: auto;
   }
 
   ::selection {
@@ -55,15 +55,15 @@
 
   .glass {
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .glass-dark {
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(212, 160, 23, 0.15);
   }
 
@@ -438,7 +438,7 @@
   }
 
   .nav-link.active {
-    color: #d4a017;
+  color: #d4a017;
   }
 
   /* Form inputs */
