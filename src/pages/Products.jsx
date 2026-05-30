@@ -350,7 +350,7 @@ export default function Products() {
         </div>
       </section>
 
-      {/* ─── Product Modal ─── */}
+           {/* ─── Product Modal ─── */}
       {selectedProduct !== null && (
         <div
           onClick={() => setSelectedProduct(null)}
@@ -365,6 +365,7 @@ export default function Products() {
         >
           <div
             onClick={e => e.stopPropagation()}
+            className="product-modal-inner"
             style={{
               background: '#111111',
               border: '1px solid rgba(212,160,23,0.25)',
@@ -399,7 +400,7 @@ export default function Products() {
             </button>
 
             {/* Left — Full Product Image */}
-            <div style={{ position: 'relative', minHeight: '480px' }}>
+            <div className="product-modal-image" style={{ position: 'relative', minHeight: '320px' }}>
               <img
                 src={products[selectedProduct].img}
                 alt={products[selectedProduct].name}
@@ -419,10 +420,10 @@ export default function Products() {
             </div>
 
             {/* Right — Product Data */}
-            <div style={{
+            <div className="product-modal-content" style={{
               padding: '40px 32px 32px',
               overflowY: 'auto',
-              maxHeight: '90vh',
+              maxHeight: '70vh',
             }}>
               {/* Grade badge */}
               <div style={{
@@ -524,8 +525,58 @@ export default function Products() {
               </Link>
             </div>
           </div>
+
+          {/* ── Responsive styles ── */}
+          <style>{`
+            /* Mobile: stack image on top, content below */
+            @media (max-width: 650px) {
+              .product-modal-inner {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: auto 1fr;
+                max-height: 92vh !important;
+                overflow-y: auto !important;
+              }
+
+              .product-modal-image {
+                min-height: 220px !important;
+                max-height: 260px;
+              }
+
+              .product-modal-image img {
+                height: 100% !important;
+                max-height: 260px;
+              }
+
+              .product-modal-content {
+                max-height: none !important;
+                overflow-y: visible !important;
+                padding: 24px 20px 28px !important;
+              }
+            }
+
+            /* Small tablets */
+            @media (min-width: 651px) and (max-width: 850px) {
+              .product-modal-inner {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: auto 1fr;
+                max-height: 92vh !important;
+                overflow-y: auto !important;
+              }
+
+              .product-modal-image {
+                min-height: 280px !important;
+                max-height: 300px;
+              }
+
+              .product-modal-content {
+                max-height: none !important;
+                overflow-y: visible !important;
+              }
+            }
+          `}</style>
         </div>
       )}
+
 
       {/* CTA */}
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, rgba(212,160,23,0.04) 0%, transparent 100%)', borderTop: '1px solid rgba(212,160,23,0.08)' }}>
