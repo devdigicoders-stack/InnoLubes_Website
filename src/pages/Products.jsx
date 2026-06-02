@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Droplets, Zap, Shield, Phone } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
-import {product1,product2,product3,product4,product5,product6,product7,product8,
+import {product1,product2,product3,product4,product5,product6,product7,product8,product9,
   hydraulicOil, gearOil, compressorOil, fluidGrease,
   frlOil, ap3Grease, textileOil, metalWorkingFluids
 } from '../assets/images/index.js';
@@ -90,6 +90,28 @@ const products = [
       'Extended service life'
     ],
     color: '#0f9d58'
+  },
+  {
+    img: product9,
+    name: 'Compressor Oil',
+    category: 'Oils',
+    grade: 'ISO VG 32/46/68/100',
+    desc: 'Advanced synthetic-blend compressor lubricant designed for rotary screw, reciprocating, and sliding vane air compressors. Fortified with premium oxidation inhibitors and anti-wear additives for maximum equipment lifespan.',
+    applications: [
+      'Rotary screw air compressors',
+      'Reciprocating piston compressors',
+      'Sliding vane compressors',
+      'Vacuum pumps',
+      'Industrial blowers'
+    ],
+    benefits: [
+      'Excellent thermal and oxidation stability',
+      'Minimizes sludge and carbon deposit formation',
+      'Superior water separation (demulsibility)',
+      'Highly effective rust & corrosion protection',
+      'Extends service intervals up to 4,000 hours'
+    ],
+    color: '#ff6f00',
   },
   {
     img: frlOil,

@@ -124,6 +124,7 @@ export default function Contact() {
                       <option>Hydraulic Oil</option>
                       <option>Gear Oil</option>
                       <option>G Pump Oil</option>
+                      <option>Compressor Oil</option>
                       <option>AP-3 Premium Grease</option>
                       <option>Textile Oil</option>
                       <option>FRL Oil</option>
