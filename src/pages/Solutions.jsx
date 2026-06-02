@@ -125,7 +125,7 @@ export default function Solutions() {
               Every INNOLUBES product is manufactured under strict ISO 9001:2015 quality standards, ensuring consistent performance batch after batch. Our advanced blending technology delivers precise viscosity control and additive dispersion.
             </p>
             <div style={{ display: 'flex', gap: '40px' }}>
-              {[{ num: '10,000+', label: 'KL Annual Capacity' }, { num: '99.8%', label: 'Quality Pass Rate' }, { num: '48hr', label: 'Dispatch Time' }].map(({ num, label }) => (
+              {[{ num: '3,000 MT', label: 'Annual Capacity' }, { num: '99.8%', label: 'Quality Pass Rate' }, { num: '48hr', label: 'Dispatch Time' }].map(({ num, label }) => (
                 <div key={label}>
                   <div style={{ fontFamily: 'Bebas Neue', fontSize: '2rem', letterSpacing: '2px' }} className="gold-text">{num}</div>
                   <div style={{ fontFamily: 'Rajdhani', fontSize: '0.7rem', letterSpacing: '3px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>{label}</div>

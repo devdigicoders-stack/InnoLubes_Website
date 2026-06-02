@@ -50,21 +50,21 @@ export default function About() {
             <div style={{ ...reveal(storyVisible, 0) }}>
               <div className="section-tag" style={{ marginBottom: '12px' }}>Our Story</div>
               <h2 style={{ fontFamily: 'Bebas Neue', fontSize: 'clamp(2.5rem, 4vw, 3.8rem)', letterSpacing: '3px', marginBottom: '24px' }}>
-                TWO DECADES OF <span className="gold-text">LUBRICATION</span> EXCELLENCE
+                10+ YEARS OF <span className="gold-text">LUBRICATION</span> EXCELLENCE
               </h2>
               <div className="industrial-line" />
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, marginBottom: '20px', fontFamily: 'Outfit' }}>
-                Founded with a passion for industrial excellence, INNOLUBES began as a small specialty lubricant manufacturer serving local industries. Over two decades, we have grown into a nationally recognized brand trusted by over 1,000 industrial clients across India.
+                Founded with a passion for industrial excellence, INNOLUBES began as a small specialty lubricant manufacturer serving local industries. Over a decade, we have grown into a nationally recognized brand trusted by over 500 industrial clients across India.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.9, marginBottom: '36px', fontFamily: 'Outfit' }}>
                 Our journey has been defined by relentless innovation, unwavering quality commitment, and a deep understanding of industrial lubrication challenges. From our state-of-the-art manufacturing plant to our nationwide distribution network, every aspect of INNOLUBES reflects our commitment to industrial excellence.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                 {[
-                  { year: '2000', event: 'Company Founded' },
-                  { year: '2008', event: 'ISO 9001 Certified' },
-                  { year: '2015', event: 'National Expansion' },
-                  { year: '2024', event: '1000+ Clients' },
+                  { year: '2016', event: 'Company Founded' },
+                  { year: '2018', event: 'ISO 9001 Certified' },
+                  { year: '2021', event: 'National Expansion' },
+                  { year: '2024', event: '500+ Clients' },
                 ].map(({ year, event }) => (
                   <div key={year} style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                     <div style={{ fontFamily: 'Bebas Neue', fontSize: '1.6rem', letterSpacing: '2px', color: '#d4a017', flexShrink: 0 }}>{year}</div>
@@ -162,9 +162,9 @@ export default function About() {
                   'Advanced multi-grade blending technology',
                   'Automated high-speed filling lines',
                   'In-house R&D laboratory',
-                  '10,000+ KL annual production capacity',
+                  '3,000 MT annual production capacity',
                   'Stringent batch QC testing',
-                  'BIS marked products',
+                  'GPCB Approved products',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'rgba(255,255,255,0.6)', fontFamily: 'Outfit', fontSize: '0.9rem' }}>
                     <div style={{ width: '6px', height: '6px', background: '#d4a017', flexShrink: 0 }} />

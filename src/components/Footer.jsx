@@ -259,19 +259,36 @@ export default function Footer() {
             </a>
 
             {/* Email */}
-            <a
-              href="mailto:info@innolubes.com"
+            <div
               style={{
                 display: 'flex',
                 gap: '14px',
-                textDecoration: 'none',
               }}
             >
-              <div className="footer-icon-box">
+              <div className="footer-icon-box" style={{ marginTop: '4px' }}>
                 <Mail size={16} color="#d4a017" />
               </div>
-              <p className="footer-text">info@innolubes.com</p>
-            </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <a
+                  href="mailto:info@innolubes.com"
+                  className="footer-text"
+                  style={{ textDecoration: 'none', transition: 'color 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#d4a017'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                >
+                  info@innolubes.com
+                </a>
+                <a
+                  href="mailto:innovativesolutions112@gmail.com"
+                  className="footer-text"
+                  style={{ textDecoration: 'none', transition: 'color 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#d4a017'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                >
+                  innovativesolutions112@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Google Map — fixed embed */}
@@ -307,7 +324,7 @@ export default function Footer() {
               >
                 <iframe
                   title="INNOLUBES Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.0!2d72.9!3d20.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ef1b5c0d7afd%3A0x6c7e4e5e7e5e7e5e!2sKaraya%20Industrial%20Park%2C%20Valsad%2C%20Gujarat%20396191!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Karaya%20Industrial%20Park%20Valsad%20Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{

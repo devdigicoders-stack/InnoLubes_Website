@@ -9,7 +9,7 @@ import {
   factoryImg, warehouseImg, warehouseExtImg, productDisplayImg,
   galleryShowcaseImg, trustedClientsImg, industrialDiscussionImg,
   manufacturingPlantImg, hydraulicOil, gearOil, compressorOil,
-  fluidGrease, frlOil, ap3Grease, textileOil, metalWorkingFluids, logo
+  fluidGrease, frlOil, ap3Grease, textileOil, metalWorkingFluids, logo, product8
 } from '../assets/images/index.js';
 
 // Animated counter component
@@ -33,7 +33,7 @@ function StatCounter({ value, suffix = '', label, icon: Icon, start }) {
 const products = [
   { img: hydraulicOil, name: 'Hydraulic Oil', desc: 'High-performance hydraulic oils for precision machinery and demanding hydraulic systems.' },
   { img: gearOil, name: 'Gear Oil', desc: 'Superior gear protection with extreme pressure additives for industrial gearboxes.' },
-  { img: compressorOil, name: 'Compressor Oil', desc: 'Specially formulated for rotary screw, reciprocating and centrifugal compressors.' },
+  { img: product8, name: 'G Pump Oil', desc: 'Heavy-duty synthetic blend lubricant optimized for Graco Pumps and high-pressure systems.' },
   { img: ap3Grease, name: 'AP-3 Premium Grease', desc: 'Multi-purpose lithium grease for bearings, chassis and general lubrication.' },
 ];
 
@@ -154,9 +154,9 @@ export default function Home({ onInquiry }) {
             display: 'flex', flexDirection: 'column', gap: '12px',
           }} className="hidden-mobile">
             {[
-              { value: '500+', label: 'Products' },
-              { value: '25+', label: 'Years Exp.' },
-              { value: '1000+', label: 'Clients' },
+              { value: '100+', label: 'Products' },
+              { value: '10+', label: 'Years Exp.' },
+              { value: '500+', label: 'Clients' },
               { value: 'ISO', label: 'Certified' },
             ].map((s, i) => (
               <div key={i} className="glass-dark" style={{ padding: '16px 20px', textAlign: 'center', minWidth: '100px' }}>
@@ -194,7 +194,7 @@ export default function Home({ onInquiry }) {
                 padding: '24px 28px', textAlign: 'center',
                 boxShadow: '0 10px 40px rgba(212,160,23,0.4)',
               }}>
-                <div style={{ fontFamily: 'Bebas Neue', fontSize: '2.8rem', color: '#0a0a0a', lineHeight: 1 }}>25+</div>
+                <div style={{ fontFamily: 'Bebas Neue', fontSize: '2.8rem', color: '#0a0a0a', lineHeight: 1 }}>10+</div>
                 <div style={{ fontFamily: 'Rajdhani', fontSize: '0.7rem', letterSpacing: '3px', textTransform: 'uppercase', color: 'rgba(0,0,0,0.7)' }}>Years of<br />Excellence</div>
               </div>
             </div>
@@ -207,13 +207,13 @@ export default function Home({ onInquiry }) {
               </h2>
               <div className="industrial-line" />
               <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, marginBottom: '20px', fontFamily: 'Outfit', fontSize: '0.95rem' }}>
-                For over two decades, INNOLUBES has been at the forefront of industrial lubrication technology. We engineer precision lubricants that protect critical machinery, optimize performance, and reduce operational costs across diverse industrial sectors.
+                For over 10 years, INNOLUBES has been at the forefront of industrial lubrication technology. We engineer precision lubricants that protect critical machinery, optimize performance, and reduce operational costs across diverse industrial sectors.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.9, marginBottom: '36px', fontFamily: 'Outfit', fontSize: '0.95rem' }}>
                 From automotive manufacturing to textile mills, from heavy earthmoving to precision engineering — INNOLUBES products deliver unmatched protection where it matters most.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '36px' }}>
-                {['ISO 9001:2015 Certified', 'BIS Approved', 'OEM Partnerships', 'Pan-India Distribution'].map(item => (
+                {['ISO 9001:2015 Certified', 'GPCB Approved', 'OEM Partnerships', 'Pan-India Distribution'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.6)', fontFamily: 'Outfit', fontSize: '0.9rem' }}>
                     <CheckCircle size={15} color="#d4a017" /> {item}
                   </div>
@@ -237,7 +237,7 @@ export default function Home({ onInquiry }) {
             <StatCounter value={100} suffix="+" label="Product Variants" icon={Droplets} start={statsVisible} />
             <StatCounter value={500} suffix="+" label="Happy Clients" icon={Star} start={statsVisible} />
             <StatCounter value={50} suffix="+" label="Industry Sectors" icon={Factory} start={statsVisible} />
-            <StatCounter value={15} suffix="+" label="States Covered" icon={Globe} start={statsVisible} />
+            <StatCounter value={3000} suffix=" MT+" label="Annual Capacity" icon={Factory} start={statsVisible} />
           </div>
         </div>
       </section>
@@ -277,7 +277,7 @@ export default function Home({ onInquiry }) {
             year: '2023', badge: 'Certification', badgeColor: 'green',
             title: 'ISO 9001:2015\nCERTIFIED',
             desc: 'World-class quality management systems validated with prestigious international certifications.',
-            pills: [{ label: 'ISO 9001:2015', color: 'green' }, { label: 'BIS Approved' }, { label: 'GBCP Approved' }],
+            pills: [{ label: 'ISO 9001:2015', color: 'green' }, { label: 'GPCB Approved' }],
             icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>,
           },
           {
@@ -290,8 +290,8 @@ export default function Home({ onInquiry }) {
           {
             year: '2026', badge: 'Live Milestone', badgeColor: 'latest',
             title: 'CLIENTS &\nGROWING',
-            desc: 'Landmark of 1,000+ satisfied industrial clients across India — trust earned through unmatched quality.',
-            pills: [{ label: '1000+ Clients' }, { label: 'Pan-India' }],
+            desc: 'Landmark of 500+ satisfied industrial clients across India — trust earned through unmatched quality.',
+            pills: [{ label: '500+ Clients' }, { label: 'Pan-India' }],
             isLatest: true,
             icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>,
           },
@@ -358,7 +358,7 @@ export default function Home({ onInquiry }) {
                 {/* Big number for latest */}
                 {item.isLatest && (
                   <div style={{ fontFamily: 'Bebas Neue', fontSize: '2.8rem', color: '#d4a017', lineHeight: 1, marginBottom: 6, letterSpacing: '2px', textShadow: '0 0 20px rgba(212,160,23,0.3)' }}>
-                    1000+
+                    500+
                   </div>
                 )}
 
@@ -593,11 +593,11 @@ export default function Home({ onInquiry }) {
               TRUSTED BY INDUSTRY <span className="gold-text">LEADERS</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.5)', maxWidth: '540px', margin: '0 auto 56px', fontFamily: 'Outfit', lineHeight: 1.8 }}>
-              Over 1,000 industrial clients across India rely on INNOLUBES for their critical lubrication requirements.
+              Over 500 industrial clients across India rely on INNOLUBES for their critical lubrication requirements.
             </p>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px', ...reveal(clientVisible, 0.2) }}>
-            {['Automotive', 'Textile', 'Steel & Mining', 'Power Generation', 'Food Processing', 'Cement', 'Paper Mills', 'Pharmaceuticals'].map((sector, i) => (
+            {['Automotive', 'Textile', 'Steel & Mining', 'Power Generation', 'Food Processing', 'Cement', 'Paper Mills', 'Pharmaceuticals', 'Solar Segment'].map((sector, i) => (
               <div key={i} className="glass-dark" style={{ padding: '12px 24px', transition: 'all 0.3s ease' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(212,160,23,0.5)'; e.currentTarget.style.background = 'rgba(212,160,23,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(212,160,23,0.15)'; e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; }}

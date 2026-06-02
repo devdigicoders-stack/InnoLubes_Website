@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Droplets, Zap, Shield, Phone } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
-import {product1,product2,product3,product4,product5,product6,product7,
+import {product1,product2,product3,product4,product5,product6,product7,product8,
   hydraulicOil, gearOil, compressorOil, fluidGrease,
   frlOil, ap3Grease, textileOil, metalWorkingFluids
 } from '../assets/images/index.js';
 
 const products = [
-   {
+  {
     img: product1,
     name: 'Hydraulic Oil',
     category: 'Oils',
@@ -29,132 +29,67 @@ const products = [
     color: '#d4801a',
   },
   {
-    img: product3,
-    name: 'Compressor Oil',
+    img: product8,
+    name: 'G Pump Oil',
     category: 'Oils',
-    grade: 'ISO VG 32/46/68/100/150',
-    desc: 'Specially formulated compressor lubricants for rotary screw, reciprocating, centrifugal and rotary vane compressors. Delivers extended service life and minimal carbon deposits.',
-    applications: ['Rotary screw compressors', 'Reciprocating compressors', 'Centrifugal compressors', 'Vacuum pumps', 'Air tools'],
-    benefits: ['Minimal carbon formation', 'Excellent moisture separation', 'Superior oxidation resistance', 'Low volatility', 'Seal compatibility'],
-    color: '#1ad496',
+    grade: 'Specially formulated for Graco Pumps',
+    desc: 'Premium heavy-duty synthetic blend lubricant engineered specifically for Graco Pumps and other high-pressure pumping systems. Extends pump seal and anti-rust life with clean, residue-free operation.',
+    applications: ['Graco Pumps', 'Piston pumps', 'High-pressure pumps', 'Industrial pumping systems'],
+    benefits: [
+      'Viscosity optimized for smooth pump lubrication',
+      'Flash Point > 220°C (High)',
+      'Pour Point Below -10°C',
+      'Extends pump seal & anti-rust life',
+      'High oxidation formula for smooth performance',
+      'Clean, residue-free operation'
+    ],
+    color: '#e53935',
   },
   {
-    img: product4,
-    name: 'Fluid Grease',
-    category: 'Greases',
+    img: product5,
+    name: 'Automatic Transmission Fluid',
+    category: 'Oils',
     grade: 'NLGI 000/00/0',
-    desc: 'Semi-fluid lithium complex greases ideal for centralized lubrication systems and enclosed gear drives requiring pumpable lubricants.',
-    applications: ['Centralized lube systems', 'Enclosed gear units', 'Chassis lubrication', 'Agricultural equipment', 'Construction machinery'],
-    benefits: ['Excellent pumpability', 'High mechanical stability', 'Good water resistance', 'Wide temperature service', 'Corrosion protection'],
-    color: '#d4a017',
+    desc: 'Premium quality Automatic Transmission Fluid specially formulated for forklifts, heavy-duty vehicles, industrial cranes, and enhanced thermal stability under demanding operating conditions.',
+    applications: [
+      'Forklifts',
+      'Heavy commercial vehicles',
+      'Industrial cranes',
+      'Automatic transmissions',
+      'Hydraulic power steering systems'
+    ],
+    benefits: [
+      'Smooth and efficient gear shifting',
+      'Excellent anti-wear protection',
+      'Superior thermal and oxidation stability',
+      'Reduces transmission component wear',
+      'Protects against rust and corrosion',
+      'Extended fluid service life',
+      'Reliable performance under heavy loads'
+    ],
+    color: '#00B7B5'
   },
   {
-  img: product5,
-  name: ' Automatic Transmission Fluid',
-  category: ' Oils',
-  grade: 'NLGI 000/00/0',
-  desc: 'Premium quality Automatic Transmission Fluid specially formulated for forklifts, heavy-duty vehicles, industrial cranes, and enhanced thermal stability under demanding operating conditions.',
-  applications: [
-    'Forklifts',
-    'Heavy commercial vehicles',
-    'Industrial cranes',
-    'Automatic transmissions',
-    'Hydraulic power steering systems'
-  ],
-  benefits: [
-    'Smooth and efficient gear shifting',
-    'Excellent anti-wear protection',
-    'Superior thermal and oxidation stability',
-    'Reduces transmission component wear',
-    'Protects against rust and corrosion',
-    'Extended fluid service life',
-    'Reliable performance under heavy loads'
-  ],
-  color: '#00B7B5'
-},
-{
-  img: product6,
-  name: 'Vacuum Oil',
-  category: 'Industrial Oils',
-  grade: 'ISO VG 100S',
-  desc: 'High-performance vacuum pump oil formulated for rotary vane and industrial vacuum systems, ensuring efficient lubrication and stable vacuum performance.',
-  applications: [
-    'Rotary vane vacuum pumps',
-    'Industrial vacuum systems',
-    'Packaging machinery',
-    'Laboratory equipment',
-    'Process industries'
-  ],
-  benefits: [
-    'Low volatility',
-    'Excellent oxidation stability',
-    'Enhanced pump efficiency',
-    'Reduced wear and deposits',
-    'Extended service life'
-  ],
-  color: '#0f9d58'
-},
-{
-  img: product7,
-  name: 'Vacuum Oil',
-  category: 'Industrial Oils',
-  grade: 'ISO VG 100S',
-  desc: 'Premium vacuum pump lubricant designed to provide reliable sealing, lubrication, and protection in demanding vacuum applications.',
-  applications: [
-    'Vacuum pumps',
-    'Vacuum packaging machines',
-    'Industrial processing units',
-    'Research laboratories',
-    'Manufacturing equipment'
-  ],
-  benefits: [
-    'Excellent thermal stability',
-    'Superior lubrication performance',
-    'Minimizes pump wear',
-    'Reliable vacuum generation',
-    'Long operational life'
-  ],
-  color: '#b71c1c'
-},
-  {
-    img: hydraulicOil,
-    name: 'Hydraulic Oil',
+    img: product6,
+    name: 'Vacuum Oil',
     category: 'Oils',
-    grade: 'ISO VG 32/46/68/100',
-    desc: 'Ultra-refined hydraulic oils with premium anti-wear additive packages. Engineered for hydraulic systems operating under high pressure and variable temperatures.',
-    applications: ['Hydraulic presses', 'CNC machinery', 'Industrial hydraulics', 'Mobile equipment', 'Marine systems'],
-    benefits: ['Superior anti-wear protection', 'Excellent oxidation stability', 'Outstanding rust & corrosion control', 'Wide temperature range', 'High load-carrying capacity'],
-    color: '#1a6ed4',
-  },
-  {
-    img: gearOil,
-    name: 'Gear Oil',
-    category: 'Oils',
-    grade: 'EP 68/100/150/220/320',
-    desc: 'Extreme pressure gear lubricants fortified with advanced EP additives. Provides exceptional protection for heavy-duty industrial gearboxes and differential drives.',
-    applications: ['Industrial gearboxes', 'Differential drives', 'Worm gears', 'Helical gears', 'Planetary gears'],
-    benefits: ['Extreme pressure protection', 'Anti-scuffing performance', 'Thermal stability', 'Foam suppression', 'Long drain intervals'],
-    color: '#d4801a',
-  },
-  {
-    img: compressorOil,
-    name: 'Compressor Oil',
-    category: 'Oils',
-    grade: 'ISO VG 32/46/68/100/150',
-    desc: 'Specially formulated compressor lubricants for rotary screw, reciprocating, centrifugal and rotary vane compressors. Delivers extended service life and minimal carbon deposits.',
-    applications: ['Rotary screw compressors', 'Reciprocating compressors', 'Centrifugal compressors', 'Vacuum pumps', 'Air tools'],
-    benefits: ['Minimal carbon formation', 'Excellent moisture separation', 'Superior oxidation resistance', 'Low volatility', 'Seal compatibility'],
-    color: '#1ad496',
-  },
-  {
-    img: fluidGrease,
-    name: 'Fluid Grease',
-    category: 'Greases',
-    grade: 'NLGI 000/00/0',
-    desc: 'Semi-fluid lithium complex greases ideal for centralized lubrication systems and enclosed gear drives requiring pumpable lubricants.',
-    applications: ['Centralized lube systems', 'Enclosed gear units', 'Chassis lubrication', 'Agricultural equipment', 'Construction machinery'],
-    benefits: ['Excellent pumpability', 'High mechanical stability', 'Good water resistance', 'Wide temperature service', 'Corrosion protection'],
-    color: '#d4a017',
+    grade: 'ISO VG 100S',
+    desc: 'High-performance vacuum pump oil formulated for rotary vane and industrial vacuum systems, ensuring efficient lubrication and stable vacuum performance.',
+    applications: [
+      'Rotary vane vacuum pumps',
+      'Industrial vacuum systems',
+      'Packaging machinery',
+      'Laboratory equipment',
+      'Process industries'
+    ],
+    benefits: [
+      'Low volatility',
+      'Excellent oxidation stability',
+      'Enhanced pump efficiency',
+      'Reduced wear and deposits',
+      'Extended service life'
+    ],
+    color: '#0f9d58'
   },
   {
     img: frlOil,

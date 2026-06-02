@@ -62,8 +62,8 @@ export default function InquiryModal({ onClose }) {
                   <option value="">Select Product Category</option>
                   <option>Hydraulic Oil</option>
                   <option>Gear Oil</option>
-                  <option>Compressor Oil</option>
-                  <option>Grease (AP-3 / Fluid)</option>
+                  <option>G Pump Oil</option>
+                  <option>Grease (AP-3)</option>
                   <option>Textile Oil</option>
                   <option>FRL Oil</option>
                   <option>Metal Working Fluids</option>
