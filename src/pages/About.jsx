@@ -62,9 +62,9 @@ export default function About() {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                 {[
                   { year: '2022', event: 'Company Founded' },
-                  { year: '2018', event: 'ISO 9001 Certified' },
-                  { year: '2021', event: 'National Expansion' },
-                  { year: '2024', event: '500+ Clients' },
+                  { year: '2023', event: 'ISO 9001 Certified' },
+                  { year: '2025', event: 'National Expansion' },
+                  { year: '2026', event: '500+ Clients' },
                 ].map(({ year, event }) => (
                   <div key={year} style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                     <div style={{ fontFamily: 'Bebas Neue', fontSize: '1.6rem', letterSpacing: '2px', color: '#d4a017', flexShrink: 0 }}>{year}</div>
