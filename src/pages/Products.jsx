@@ -49,7 +49,6 @@ const products = [
     img: product5,
     name: 'Automatic Transmission Fluid',
     category: 'Oils',
-    grade: 'NLGI 000/00/0',
     desc: 'Premium quality Automatic Transmission Fluid specially formulated for forklifts, heavy-duty vehicles, industrial cranes, and enhanced thermal stability under demanding operating conditions.',
     applications: [
       'Forklifts',
@@ -260,15 +259,17 @@ export default function Products() {
                     onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                   />
                   <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 50%)` }} />
-                  <div style={{
-                    position: 'absolute', top: '16px', right: '16px',
-                    background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(212,160,23,0.4)',
-                    padding: '4px 12px',
-                    fontFamily: 'Rajdhani', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '2px',
-                    color: '#d4a017',
-                  }}>
-                    {p.grade}
-                  </div>
+                  {p.grade && (
+                    <div style={{
+                      position: 'absolute', top: '16px', right: '16px',
+                      background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(212,160,23,0.4)',
+                      padding: '4px 12px',
+                      fontFamily: 'Rajdhani', fontWeight: 600, fontSize: '0.72rem', letterSpacing: '2px',
+                      color: '#d4a017',
+                    }}>
+                      {p.grade}
+                    </div>
+                  )}
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${p.color}, transparent)` }} />
                 </div>
 
@@ -383,18 +384,20 @@ export default function Products() {
               maxHeight: '70vh',
             }}>
               {/* Grade badge */}
-              <div style={{
-                display: 'inline-block',
-                background: 'rgba(212,160,23,0.08)',
-                border: '1px solid rgba(212,160,23,0.3)',
-                padding: '4px 12px',
-                fontFamily: 'Rajdhani', fontWeight: 600,
-                fontSize: '0.7rem', letterSpacing: '3px',
-                color: '#d4a017', textTransform: 'uppercase',
-                marginBottom: '14px',
-              }}>
-                {products[selectedProduct].grade}
-              </div>
+              {products[selectedProduct].grade && (
+                <div style={{
+                  display: 'inline-block',
+                  background: 'rgba(212,160,23,0.08)',
+                  border: '1px solid rgba(212,160,23,0.3)',
+                  padding: '4px 12px',
+                  fontFamily: 'Rajdhani', fontWeight: 600,
+                  fontSize: '0.7rem', letterSpacing: '3px',
+                  color: '#d4a017', textTransform: 'uppercase',
+                  marginBottom: '14px',
+                }}>
+                  {products[selectedProduct].grade}
+                </div>
+              )}
 
               {/* Product Name */}
               <h2 style={{

@@ -92,10 +92,10 @@ export default function Footer() {
             {/* Social Icons */}
             <div style={{ display: 'flex', gap: '14px' }}>
               {[
-                { Icon: Facebook,  href: 'https://www.facebook.com/innolubes' },
+                { Icon: Facebook, href: 'https://www.facebook.com/innolubes' },
                 { Icon: Instagram, href: 'https://www.instagram.com/innolubes' },
-                { Icon: Linkedin,  href: 'https://www.linkedin.com/company/innolubes' },
-                { Icon: Twitter,   href: 'https://www.twitter.com/innolubes' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/innolubes' },
+                { Icon: Twitter, href: 'https://www.twitter.com/innolubes' },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
@@ -150,12 +150,12 @@ export default function Footer() {
             </h4>
 
             {[
-              { label: 'Home',     path: '/' },
+              { label: 'Home', path: '/' },
               { label: 'About Us', path: '/about' },
               { label: 'Products', path: '/products' },
-              { label: 'Solutions',path: '/solutions' },
-              { label: 'Gallery',  path: '/gallery' },
-              { label: 'Contact',  path: '/contact' },
+              { label: 'Solutions', path: '/solutions' },
+              { label: 'Gallery', path: '/gallery' },
+              { label: 'Contact', path: '/contact' },
             ].map(({ label, path }) => (
               <Link
                 key={path}
@@ -279,13 +279,13 @@ export default function Footer() {
                   info@innolubes.com
                 </a>
                 <a
-                  href="mailto:innovativesolutions112@gmail.com"
+                  href="mailto:innovativesolutions122@gmail.com"
                   className="footer-text"
                   style={{ textDecoration: 'none', transition: 'color 0.3s' }}
                   onMouseEnter={(e) => e.currentTarget.style.color = '#d4a017'}
                   onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
                 >
-                  innovativesolutions112@gmail.com
+                  innovativesolutions122@gmail.com
                 </a>
               </div>
             </div>
@@ -365,8 +365,8 @@ export default function Footer() {
           <div style={{ display: 'flex', gap: '22px', flexWrap: 'wrap' }}>
             {[
               { label: 'Privacy Policy', path: '/privacy-policy' },
-              { label: 'Terms of Use',   path: '/terms-of-use' },
-              { label: 'Sitemap',        path: '/sitemap' },
+              { label: 'Terms of Use', path: '/terms-of-use' },
+              { label: 'Sitemap', path: '/sitemap' },
             ].map(({ label, path }) => (
               <Link
                 key={label}

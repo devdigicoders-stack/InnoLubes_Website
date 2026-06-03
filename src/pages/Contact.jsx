@@ -53,7 +53,7 @@ export default function Contact() {
             {[
               { icon: MapPin, title: 'Our Address', lines: ['Plot No. 31, Karaya Industrial Park,', '  Village Karaya, Valsad, Gujarat - 396191'] },
               { icon: Phone, title: 'Call Us', lines: ['+91 9426853064', '+91 7984441421'] },
-              { icon: Mail, title: 'Email Us', lines: ['info@innolubes.com', 'innovativesolutions112@gmail.com'] },
+              { icon: Mail, title: 'Email Us', lines: ['info@innolubes.com', 'innovativesolutions122@gmail.com'] },
               { icon: Clock, title: 'Working Hours', lines: ['Mon – Sat: 9AM – 6PM', 'Sun: Closed'] },
             ].map(({ icon: Icon, title, lines }, i) => (
               <div key={i} style={{
