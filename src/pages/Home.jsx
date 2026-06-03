@@ -242,149 +242,149 @@ export default function Home({ onInquiry }) {
         </div>
       </section>
       {/* ========== MILESTONES TIMELINE ========== */}
-<section style={{ padding: '100px 0', background: '#080808', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(212,160,23,0.08)', borderBottom: '1px solid rgba(212,160,23,0.08)' }}>
-  {/* Grid pattern bg */}
-  <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'linear-gradient(rgba(212,160,23,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(212,160,23,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-  <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '300px', background: 'radial-gradient(ellipse, rgba(212,160,23,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+      <section style={{ padding: '100px 0', background: '#080808', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(212,160,23,0.08)', borderBottom: '1px solid rgba(212,160,23,0.08)' }}>
+        {/* Grid pattern bg */}
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'linear-gradient(rgba(212,160,23,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(212,160,23,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '300px', background: 'radial-gradient(ellipse, rgba(212,160,23,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
-  <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
-    {/* Header */}
-    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-      <div className="section-tag" style={{ marginBottom: '14px' }}>Our Journey</div>
-      <h2 style={{ fontFamily: 'Bebas Neue', fontSize: 'clamp(2.5rem, 4vw, 3.8rem)', letterSpacing: '3px', marginBottom: '12px' }}>
-        MILESTONES OF <span className="gold-text">EXCELLENCE</span>
-      </h2>
-      <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '480px', margin: '0 auto', fontFamily: 'Outfit', lineHeight: 1.8, fontSize: '0.95rem' }}>
-        From inception to industry leadership — every certification earned, every milestone a testament to our commitment.
-      </p>
-    </div>
+        <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <div className="section-tag" style={{ marginBottom: '14px' }}>Our Journey</div>
+            <h2 style={{ fontFamily: 'Bebas Neue', fontSize: 'clamp(2.5rem, 4vw, 3.8rem)', letterSpacing: '3px', marginBottom: '12px' }}>
+              MILESTONES OF <span className="gold-text">EXCELLENCE</span>
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '480px', margin: '0 auto', fontFamily: 'Outfit', lineHeight: 1.8, fontSize: '0.95rem' }}>
+              From inception to industry leadership — every certification earned, every milestone a testament to our commitment.
+            </p>
+          </div>
 
-    {/* Timeline */}
-    <div style={{ position: 'relative', maxWidth: '1100px', margin: '0 auto' }}>
-      {/* Connecting line */}
-      <div style={{ position: 'absolute', top: 21, left: '12.5%', right: '12.5%', height: '1px', background: 'linear-gradient(to right, rgba(212,160,23,0.05), rgba(212,160,23,0.55) 15%, rgba(212,160,23,0.55) 85%, rgba(212,160,23,0.05))', zIndex: 0 }} />
+          {/* Timeline */}
+          <div style={{ position: 'relative', maxWidth: '1100px', margin: '0 auto' }}>
+            {/* Connecting line */}
+            <div style={{ position: 'absolute', top: 21, left: '12.5%', right: '12.5%', height: '1px', background: 'linear-gradient(to right, rgba(212,160,23,0.05), rgba(212,160,23,0.55) 15%, rgba(212,160,23,0.55) 85%, rgba(212,160,23,0.05))', zIndex: 0 }} />
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0 }}>
-        {[
-          {
-            year: '2022', badge: 'Foundation Year', badgeColor: 'gold',
-            title: 'INNOLUBES\nESTABLISHED',
-            desc: 'Founded with a vision to deliver ultra-premium industrial lubricants to the Indian market with cutting-edge technology.',
-            pills: [{ label: 'Incorporated' }, { label: 'First Products' }],
-            icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
-          },
-          {
-            year: '2023', badge: 'Certification', badgeColor: 'green',
-            title: 'ISO 9001:2015\nCERTIFIED',
-            desc: 'World-class quality management systems validated with prestigious international certifications.',
-            pills: [{ label: 'ISO 9001:2015', color: 'green' }, { label: 'GPCB Approved' }],
-            icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>,
-          },
-          {
-            year: '2025', badge: 'OEM Partnership', badgeColor: 'blue',
-            title: 'OEM\nCERTIFIED',
-            desc: 'Approved by leading Original Equipment Manufacturers for use in their flagship industrial machinery.',
-            pills: [{ label: 'OEM Certified', color: 'blue' }, { label: 'OEM Partnerships', color: 'blue' }],
-            icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2l2 3 2-5 2 2h2"/></svg>,
-          },
-          {
-            year: '2026', badge: 'Live Milestone', badgeColor: 'latest',
-            title: 'CLIENTS &\nGROWING',
-            desc: 'Landmark of 500+ satisfied industrial clients across India — trust earned through unmatched quality.',
-            pills: [{ label: '500+ Clients' }, { label: 'Pan-India' }],
-            isLatest: true,
-            icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>,
-          },
-        ].map((item, i) => {
-          const badgeStyles = {
-            gold:   { background: 'rgba(212,160,23,0.1)',  border: '1px solid rgba(212,160,23,0.3)',  color: '#d4a017' },
-            green:  { background: 'rgba(34,197,94,0.08)',  border: '1px solid rgba(34,197,94,0.25)', color: '#22c55e' },
-            blue:   { background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.25)', color: '#60a5fa' },
-            latest: { background: 'rgba(212,160,23,0.14)', border: '1px solid rgba(212,160,23,0.45)', color: '#d4a017' },
-          };
-          const pillStyle = (c) => c === 'green'
-            ? { color: '#22c55e', borderColor: 'rgba(34,197,94,0.3)' }
-            : c === 'blue'
-            ? { color: '#60a5fa', borderColor: 'rgba(59,130,246,0.3)' }
-            : {};
-          return (
-            <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 10px', position: 'relative', zIndex: 1 }}
-              onMouseEnter={e => { const card = e.currentTarget.querySelector('.milestone-card'); if(card){ card.style.borderColor='rgba(212,160,23,0.5)'; card.style.background='rgba(212,160,23,0.05)'; card.style.transform='translateY(-5px)'; } }}
-              onMouseLeave={e => { const card = e.currentTarget.querySelector('.milestone-card'); if(card){ card.style.borderColor=item.isLatest?'rgba(212,160,23,0.4)':'rgba(212,160,23,0.1)'; card.style.background=item.isLatest?'rgba(212,160,23,0.04)':'rgba(255,255,255,0.02)'; card.style.transform='translateY(0)'; } }}
-            >
-              {/* Dot */}
-              <div style={{ position: 'relative', width: 44, height: 44, marginBottom: 14, flexShrink: 0 }}>
-                {/* Spinning / pulsing ring */}
-                <div style={{
-                  position: 'absolute', inset: -6, borderRadius: '50%',
-                  border: item.isLatest ? '1px solid rgba(212,160,23,0.55)' : '1px dashed rgba(212,160,23,0.2)',
-                  animation: item.isLatest ? 'tlPulse 2s ease-in-out infinite' : 'tlSpin 12s linear infinite',
-                }} />
-                <div style={{
-                  width: 44, height: 44, borderRadius: '50%',
-                  background: item.isLatest ? 'linear-gradient(135deg, #d4a017, #b8860b)' : '#0d0d0d',
-                  border: `2px solid ${item.isLatest ? '#d4a017' : 'rgba(212,160,23,0.6)'}`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  position: 'relative', zIndex: 1,
-                  boxShadow: item.isLatest ? '0 0 0 4px rgba(212,160,23,0.18), 0 0 32px rgba(212,160,23,0.5)' : '0 0 0 3px rgba(212,160,23,0.07), 0 0 16px rgba(212,160,23,0.15)',
-                }}>
-                  {item.icon}
-                </div>
-              </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0 }}>
+              {[
+                {
+                  year: '2016', badge: 'Foundation Year', badgeColor: 'gold',
+                  title: 'INNOLUBES\nESTABLISHED',
+                  desc: 'Founded with a vision to deliver ultra-premium industrial lubricants to the Indian market with cutting-edge technology.',
+                  pills: [{ label: 'Incorporated' }, { label: 'First Products' }],
+                  icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>,
+                },
+                {
+                  year: '2023', badge: 'Certification', badgeColor: 'green',
+                  title: 'ISO 9001:2015\nCERTIFIED',
+                  desc: 'World-class quality management systems validated with prestigious international certifications.',
+                  pills: [{ label: 'ISO 9001:2015', color: 'green' }, { label: 'GPCB Approved' }],
+                  icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" /></svg>,
+                },
+                {
+                  year: '2025', badge: 'OEM Partnership', badgeColor: 'blue',
+                  title: 'OEM\nCERTIFIED',
+                  desc: 'Approved by leading Original Equipment Manufacturers for use in their flagship industrial machinery.',
+                  pills: [{ label: 'OEM Certified', color: 'blue' }, { label: 'OEM Partnerships', color: 'blue' }],
+                  icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#d4a017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /><path d="M7 8h2l2 3 2-5 2 2h2" /></svg>,
+                },
+                {
+                  year: '2026', badge: 'Live Milestone', badgeColor: 'latest',
+                  title: 'CLIENTS &\nGROWING',
+                  desc: 'Landmark of 500+ satisfied industrial clients across India — trust earned through unmatched quality.',
+                  pills: [{ label: '500+ Clients' }, { label: 'Pan-India' }],
+                  isLatest: true,
+                  icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>,
+                },
+              ].map((item, i) => {
+                const badgeStyles = {
+                  gold: { background: 'rgba(212,160,23,0.1)', border: '1px solid rgba(212,160,23,0.3)', color: '#d4a017' },
+                  green: { background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.25)', color: '#22c55e' },
+                  blue: { background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.25)', color: '#60a5fa' },
+                  latest: { background: 'rgba(212,160,23,0.14)', border: '1px solid rgba(212,160,23,0.45)', color: '#d4a017' },
+                };
+                const pillStyle = (c) => c === 'green'
+                  ? { color: '#22c55e', borderColor: 'rgba(34,197,94,0.3)' }
+                  : c === 'blue'
+                    ? { color: '#60a5fa', borderColor: 'rgba(59,130,246,0.3)' }
+                    : {};
+                return (
+                  <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 10px', position: 'relative', zIndex: 1 }}
+                    onMouseEnter={e => { const card = e.currentTarget.querySelector('.milestone-card'); if (card) { card.style.borderColor = 'rgba(212,160,23,0.5)'; card.style.background = 'rgba(212,160,23,0.05)'; card.style.transform = 'translateY(-5px)'; } }}
+                    onMouseLeave={e => { const card = e.currentTarget.querySelector('.milestone-card'); if (card) { card.style.borderColor = item.isLatest ? 'rgba(212,160,23,0.4)' : 'rgba(212,160,23,0.1)'; card.style.background = item.isLatest ? 'rgba(212,160,23,0.04)' : 'rgba(255,255,255,0.02)'; card.style.transform = 'translateY(0)'; } }}
+                  >
+                    {/* Dot */}
+                    <div style={{ position: 'relative', width: 44, height: 44, marginBottom: 14, flexShrink: 0 }}>
+                      {/* Spinning / pulsing ring */}
+                      <div style={{
+                        position: 'absolute', inset: -6, borderRadius: '50%',
+                        border: item.isLatest ? '1px solid rgba(212,160,23,0.55)' : '1px dashed rgba(212,160,23,0.2)',
+                        animation: item.isLatest ? 'tlPulse 2s ease-in-out infinite' : 'tlSpin 12s linear infinite',
+                      }} />
+                      <div style={{
+                        width: 44, height: 44, borderRadius: '50%',
+                        background: item.isLatest ? 'linear-gradient(135deg, #d4a017, #b8860b)' : '#0d0d0d',
+                        border: `2px solid ${item.isLatest ? '#d4a017' : 'rgba(212,160,23,0.6)'}`,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        position: 'relative', zIndex: 1,
+                        boxShadow: item.isLatest ? '0 0 0 4px rgba(212,160,23,0.18), 0 0 32px rgba(212,160,23,0.5)' : '0 0 0 3px rgba(212,160,23,0.07), 0 0 16px rgba(212,160,23,0.15)',
+                      }}>
+                        {item.icon}
+                      </div>
+                    </div>
 
-              {/* Year */}
-              <div style={{ fontFamily: 'Bebas Neue', fontSize: item.isLatest ? '1.25rem' : '1.1rem', letterSpacing: '3px', color: '#d4a017', marginBottom: 12, textAlign: 'center', textShadow: item.isLatest ? '0 0 14px rgba(212,160,23,0.6)' : 'none' }}>
-                {item.year}
-              </div>
+                    {/* Year */}
+                    <div style={{ fontFamily: 'Bebas Neue', fontSize: item.isLatest ? '1.25rem' : '1.1rem', letterSpacing: '3px', color: '#d4a017', marginBottom: 12, textAlign: 'center', textShadow: item.isLatest ? '0 0 14px rgba(212,160,23,0.6)' : 'none' }}>
+                      {item.year}
+                    </div>
 
-              {/* Card */}
-              <div className="milestone-card" style={{
-                flex: 1, width: '100%',
-                background: item.isLatest ? 'rgba(212,160,23,0.04)' : 'rgba(255,255,255,0.02)',
-                border: `1px solid ${item.isLatest ? 'rgba(212,160,23,0.4)' : 'rgba(212,160,23,0.1)'}`,
-                padding: '20px 16px 22px', textAlign: 'center',
-                display: 'flex', flexDirection: 'column', alignItems: 'center',
-                transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden',
-              }}>
-                {/* Top accent line */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: item.isLatest ? 'linear-gradient(90deg, transparent, #d4a017, transparent)' : 'linear-gradient(90deg, transparent, rgba(212,160,23,0.3), transparent)', opacity: item.isLatest ? 1 : 0.5 }} />
+                    {/* Card */}
+                    <div className="milestone-card" style={{
+                      flex: 1, width: '100%',
+                      background: item.isLatest ? 'rgba(212,160,23,0.04)' : 'rgba(255,255,255,0.02)',
+                      border: `1px solid ${item.isLatest ? 'rgba(212,160,23,0.4)' : 'rgba(212,160,23,0.1)'}`,
+                      padding: '20px 16px 22px', textAlign: 'center',
+                      display: 'flex', flexDirection: 'column', alignItems: 'center',
+                      transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden',
+                    }}>
+                      {/* Top accent line */}
+                      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: item.isLatest ? 'linear-gradient(90deg, transparent, #d4a017, transparent)' : 'linear-gradient(90deg, transparent, rgba(212,160,23,0.3), transparent)', opacity: item.isLatest ? 1 : 0.5 }} />
 
-                {/* Badge */}
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '3px 10px', marginBottom: 12, fontSize: 9, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Rajdhani', ...badgeStyles[item.badgeColor] }}>
-                  {item.isLatest && <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#d4a017' }} />}
-                  {item.badge}
-                </div>
+                      {/* Badge */}
+                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '3px 10px', marginBottom: 12, fontSize: 9, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Rajdhani', ...badgeStyles[item.badgeColor] }}>
+                        {item.isLatest && <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#d4a017' }} />}
+                        {item.badge}
+                      </div>
 
-                {/* Big number for latest */}
-                {item.isLatest && (
-                  <div style={{ fontFamily: 'Bebas Neue', fontSize: '2.8rem', color: '#d4a017', lineHeight: 1, marginBottom: 6, letterSpacing: '2px', textShadow: '0 0 20px rgba(212,160,23,0.3)' }}>
-                    500+
+                      {/* Big number for latest */}
+                      {item.isLatest && (
+                        <div style={{ fontFamily: 'Bebas Neue', fontSize: '2.8rem', color: '#d4a017', lineHeight: 1, marginBottom: 6, letterSpacing: '2px', textShadow: '0 0 20px rgba(212,160,23,0.3)' }}>
+                          500+
+                        </div>
+                      )}
+
+                      <div style={{ fontFamily: 'Rajdhani', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1.5px', textTransform: 'uppercase', color: item.isLatest ? '#d4a017' : '#f0f0f0', marginBottom: 10, lineHeight: 1.3 }}>
+                        {item.title.split('\n').map((line, l) => <span key={l} style={{ display: 'block' }}>{line}</span>)}
+                      </div>
+
+                      <p style={{ color: 'rgba(255,255,255,0.38)', fontSize: 12, lineHeight: 1.65, fontFamily: 'Outfit', marginBottom: 14, flex: 1 }}>{item.desc}</p>
+
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, justifyContent: 'center', marginTop: 'auto' }}>
+                        {item.pills.map((pill, j) => (
+                          <span key={j} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(212,160,23,0.2)', padding: '3px 8px', fontSize: 9, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', fontFamily: 'Rajdhani', color: '#d4a017', ...pillStyle(pill.color) }}>
+                            <span style={{ width: 4, height: 4, borderRadius: '50%', background: pill.color === 'green' ? '#22c55e' : pill.color === 'blue' ? '#60a5fa' : '#d4a017', flexShrink: 0 }} />
+                            {pill.label}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                )}
-
-                <div style={{ fontFamily: 'Rajdhani', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '1.5px', textTransform: 'uppercase', color: item.isLatest ? '#d4a017' : '#f0f0f0', marginBottom: 10, lineHeight: 1.3 }}>
-                  {item.title.split('\n').map((line, l) => <span key={l} style={{ display: 'block' }}>{line}</span>)}
-                </div>
-
-                <p style={{ color: 'rgba(255,255,255,0.38)', fontSize: 12, lineHeight: 1.65, fontFamily: 'Outfit', marginBottom: 14, flex: 1 }}>{item.desc}</p>
-
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, justifyContent: 'center', marginTop: 'auto' }}>
-                  {item.pills.map((pill, j) => (
-                    <span key={j} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(212,160,23,0.2)', padding: '3px 8px', fontSize: 9, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', fontFamily: 'Rajdhani', color: '#d4a017', ...pillStyle(pill.color) }}>
-                      <span style={{ width: 4, height: 4, borderRadius: '50%', background: pill.color === 'green' ? '#22c55e' : pill.color === 'blue' ? '#60a5fa' : '#d4a017', flexShrink: 0 }} />
-                      {pill.label}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
-    </div>
-  </div>
+          </div>
+        </div>
 
- <style>{`
+        <style>{`
     @keyframes tlSpin { to { transform: rotate(360deg); } }
     @keyframes tlPulse { 0%,100% { opacity:0.5; transform:scale(1); } 50% { opacity:1; transform:scale(1.06); } }
 
@@ -431,7 +431,7 @@ export default function Home({ onInquiry }) {
       .tl-vline { display: none !important; }
     }
   `}</style>
-</section>
+      </section>
 
       {/* ========== PRODUCTS PREVIEW ========== */}
       <section ref={productsRef} style={{ padding: '100px 0', background: '#0a0a0a' }}>

@@ -11,6 +11,7 @@ import product6 from './product6.jpeg';
 import product7 from './product7.jpeg';
 import product8 from './product8.png';
 import product9 from './product9.png';
+import product10 from './product10.png';
 
 
 // Product images (fallback / additional grades)
@@ -54,6 +55,7 @@ export {
   product7,
   product8,
   product9,
+  product10,
   // Product oils & greases
   compressorOil,
   gearOil,

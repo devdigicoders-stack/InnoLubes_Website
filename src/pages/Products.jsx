@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Droplets, Zap, Shield, Phone } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
-import {product1,product2,product3,product4,product5,product6,product7,product8,product9,
+import {product1,product2,product3,product4,product5,product6,product7,product8,product9,product10,
   hydraulicOil, gearOil, compressorOil, fluidGrease,
   frlOil, ap3Grease, textileOil, metalWorkingFluids
 } from '../assets/images/index.js';
@@ -89,6 +89,32 @@ const products = [
       'Extended service life'
     ],
     color: '#0f9d58'
+  },
+  {
+    img: product10,
+    name: 'PFPE Vacuum Oil',
+    category: 'Oils',
+    grade: 'Premium PFPE Grade',
+    desc: 'Premium perfluoropolyether (PFPE) vacuum pump oil engineered for extreme performance, high temperature stability, and outstanding chemical inertness in highly demanding vacuum applications.',
+    applications: [
+      'Rotary Vacuum Pumps',
+      'Diffusion Vacuum Systems',
+      'Semiconductor Industry',
+      'Pharmaceutical Equipment',
+      'Chemical Processing',
+      'Aerospace Vacuum Systems',
+      'Laboratory Equipment',
+      'Oxygen Compression Systems'
+    ],
+    benefits: [
+      'Ultra-low vapor pressure for superior vacuum performance',
+      'Excellent chemical & thermal stability (-70°C to +250°C)',
+      'Non-flammable & non-reactive for safe handling',
+      'Long service life & long drain intervals',
+      'Superior lubrication & wear protection',
+      'Compatible with oxygen service'
+    ],
+    color: '#d4a017'
   },
   {
     img: product9,
