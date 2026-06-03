@@ -61,7 +61,7 @@ export default function About() {
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                 {[
-                  { year: '2016', event: 'Company Founded' },
+                  { year: '2022', event: 'Company Founded' },
                   { year: '2018', event: 'ISO 9001 Certified' },
                   { year: '2021', event: 'National Expansion' },
                   { year: '2024', event: '500+ Clients' },
@@ -142,7 +142,7 @@ export default function About() {
 
       {/* Manufacturing Capability */}
       <section ref={mfgRef} style={{ position: 'relative', overflow: 'hidden' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '1300px',margin: '0 auto',padding: '0 24px', gap: '30px', alignItems: 'center', }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '1300px', margin: '0 auto', padding: '0 24px', gap: '30px', alignItems: 'center', }}>
           <div style={{ position: 'relative', height: '560px' }}>
             <img src={manufacturingPlantImg} alt="Manufacturing Plant" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.3)' }} />
@@ -210,120 +210,120 @@ export default function About() {
       </section>
 
       {/* Exhibition */}
-    <section
-  ref={exhibRef}
-  style={{
-    position: 'relative',
-    height: '540px',
-    overflow: 'hidden',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0 24px',
-  }}
->
-  {/* Background Image */}
-  <img
-    src={exhibitionImg}
-    alt="Exhibition"
-    style={{
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center', // image center
-      transform: 'scale(1.05)', // thoda zoom
-    }}
-  />
-
-  {/* Overlay */}
-  <div
-    style={{
-      position: 'absolute',
-      inset: 0,
-      background:
-        'linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.82) 100%)',
-    }}
-  />
-
-  {/* Content */}
-  <div
-    style={{
-      position: 'relative',
-      zIndex: 1,
-      width: '100%',
-      maxWidth: '1300px',
-      margin: '0 auto',
-      padding: '0 40px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      ...reveal(exhibVisible, 0),
-    }}
-  >
-    <div
-      style={{
-        maxWidth: '620px',
-      }}
-    >
-      <div
-        className="section-tag"
-        style={{ marginBottom: '16px' }}
-      >
-        Industrial Exhibitions
-      </div>
-
-      <h2
+      <section
+        ref={exhibRef}
         style={{
-          fontFamily: 'Bebas Neue',
-          fontSize: 'clamp(2.8rem, 5vw, 4.2rem)',
-          letterSpacing: '3px',
-          lineHeight: 1.05,
-          marginBottom: '20px',
+          position: 'relative',
+          height: '540px',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 24px',
         }}
       >
-        SHOWCASING INNOVATION AT{' '}
-        <span className="gold-text">
-          INDIA'S TOP
-        </span>{' '}
-        INDUSTRIAL EXPOS
-      </h2>
-
-      <p
-        style={{
-          color: 'rgba(255,255,255,0.68)',
-          lineHeight: 1.8,
-          marginBottom: '32px',
-          fontFamily: 'Outfit',
-        }}
-      >
-        INNOLUBES actively participates in major
-        national and international industrial
-        exhibitions, staying at the forefront of
-        industry trends and showcasing our latest
-        product innovations.
-      </p>
-
-      <Link to="/contact">
-        <button
-          className="btn-gold"
+        {/* Background Image */}
+        <img
+          src={exhibitionImg}
+          alt="Exhibition"
           style={{
-            display: 'inline-flex',
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center', // image center
+            transform: 'scale(1.05)', // thoda zoom
+          }}
+        />
+
+        {/* Overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.82) 100%)',
+          }}
+        />
+
+        {/* Content */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            width: '100%',
+            maxWidth: '1300px',
+            margin: '0 auto',
+            padding: '0 40px',
+            display: 'flex',
             alignItems: 'center',
-            gap: '10px',
-            fontSize: '0.85rem',
+            justifyContent: 'flex-start',
+            ...reveal(exhibVisible, 0),
           }}
         >
-          Connect With Us
-          <ArrowRight size={16} />
-        </button>
-      </Link>
-    </div>
-  </div>
+          <div
+            style={{
+              maxWidth: '620px',
+            }}
+          >
+            <div
+              className="section-tag"
+              style={{ marginBottom: '16px' }}
+            >
+              Industrial Exhibitions
+            </div>
 
-  {/* Responsive */}
-  <style>{`
+            <h2
+              style={{
+                fontFamily: 'Bebas Neue',
+                fontSize: 'clamp(2.8rem, 5vw, 4.2rem)',
+                letterSpacing: '3px',
+                lineHeight: 1.05,
+                marginBottom: '20px',
+              }}
+            >
+              SHOWCASING INNOVATION AT{' '}
+              <span className="gold-text">
+                INDIA'S TOP
+              </span>{' '}
+              INDUSTRIAL EXPOS
+            </h2>
+
+            <p
+              style={{
+                color: 'rgba(255,255,255,0.68)',
+                lineHeight: 1.8,
+                marginBottom: '32px',
+                fontFamily: 'Outfit',
+              }}
+            >
+              INNOLUBES actively participates in major
+              national and international industrial
+              exhibitions, staying at the forefront of
+              industry trends and showcasing our latest
+              product innovations.
+            </p>
+
+            <Link to="/contact">
+              <button
+                className="btn-gold"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  fontSize: '0.85rem',
+                }}
+              >
+                Connect With Us
+                <ArrowRight size={16} />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Responsive */}
+        <style>{`
     @media (max-width: 768px) {
       section {
         height: auto !important;
@@ -340,7 +340,7 @@ export default function About() {
       }
     }
   `}</style>
-</section>
+      </section>
 
       <style>{`
         @media (max-width: 768px) {

@@ -267,7 +267,7 @@ export default function Home({ onInquiry }) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0 }}>
               {[
                 {
-                  year: '2016', badge: 'Foundation Year', badgeColor: 'gold',
+                  year: '2022', badge: 'Foundation Year', badgeColor: 'gold',
                   title: 'INNOLUBES\nESTABLISHED',
                   desc: 'Founded with a vision to deliver ultra-premium industrial lubricants to the Indian market with cutting-edge technology.',
                   pills: [{ label: 'Incorporated' }, { label: 'First Products' }],
